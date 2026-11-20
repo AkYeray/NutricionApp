@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="nutricionalappfx.controlador.FXMLAdminPacineteController">
+   <children>
+      <!-- Barra Superior -->
+      <Button fx:id="btnVolver" layoutX="25.0" layoutY="20.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" text="←">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      
+      <Label fx:id="lblTitulo" layoutX="90.0" layoutY="23.0" text="Administrador Pacientes" textFill="#003366">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      
+      <Button fx:id="btnCerrarSesion" layoutX="720.0" layoutY="22.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" text="Cerrar sesión" />
+
+      <!-- Sección de Búsqueda y Acciones (Alta, Edición, Baja) -->
+      <TextField fx:id="txtBuscar" layoutX="25.0" layoutY="80.0" prefHeight="30.0" prefWidth="250.0" promptText="Ingrese código, nombre o apellido..." />
+      
+      <Button fx:id="btnBuscar" layoutX="285.0" layoutY="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Buscar" />
+      
+      <Button fx:id="btnAlta" layoutX="510.0" layoutY="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Alta" />
+      
+      <Button fx:id="btnEdicion" layoutX="600.0" layoutY="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Edición" />
+      
+      <Button fx:id="btnBaja" layoutX="690.0" layoutY="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Baja" />
+
+      <!-- Tabla de Pacientes -->
+      <TableView fx:id="tablePacientes" layoutX="25.0" layoutY="135.0" prefHeight="435.0" prefWidth="800.0" placeholder="Tabla sin contenido">
+        <columns>
+          <TableColumn fx:id="colCodigoPaciente" prefWidth="110.0" text="Código Paciente" />
+          <TableColumn fx:id="colNombre" prefWidth="120.0" text="Nombre" />
+          <TableColumn fx:id="colApellidoPaterno" prefWidth="130.0" text="Apellido Paterno" />
+          <TableColumn fx:id="colApellidoMaterno" prefWidth="130.0" text="Apellido Materno" />
+          <TableColumn fx:id="colFechaNacimiento" prefWidth="120.0" text="Fecha Nacimiento" />
+          <TableColumn fx:id="colTelefono" prefWidth="90.0" text="Teléfono" />
+          <TableColumn fx:id="colCorreo" prefWidth="199.0" text="Correo Electrónico" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
